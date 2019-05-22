@@ -16,11 +16,17 @@ public class Input extends HttpServlet {
 	String reqUri = request.getRequestURI();
 	String command = reqUri.substring(ctxPath.length());
 	
-	if(command.equals("/input.input")) {
+	if(command.equals("/Input.input")) {
 		String text = request.getParameter("text");
-		System.out.println(text);
-		request.setAttribute("result", text);
-		request.getRequestDispatcher("result.jsp").forward(request, response);
+//		testDAO dao = new testDAO();
+//		int result = dao.insert(text);
+//		if(result == 1) {
+//			request.setAttribute("result", text);
+//			request.getRequestDispatcher("result.jsp").forward(request, response);
+//		}else {
+//			response.sendRedirect("error.html");
+//		}
+		
 	}
 	}
 
