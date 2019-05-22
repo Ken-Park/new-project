@@ -18,7 +18,7 @@ public class Input extends HttpServlet {
 	
 	if(command.equals("/Input.input")) {
 		String text = request.getParameter("text");
-//		testDAO dao = new testDAO();
+//		testDAO dao = new testDAO();/
 //		int result = dao.insert(text);
 //		if(result == 1) {
 //			request.setAttribute("result", text);
