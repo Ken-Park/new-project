@@ -16,7 +16,7 @@ public class Input extends HttpServlet {
 	String reqUri = request.getRequestURI();
 	String command = reqUri.substring(ctxPath.length());
 	
-	if(command.equals("/input.input")) {
+	if(command.equals("/Input.input")) {
 		String text = request.getParameter("text");
 		System.out.println(text);
 		request.setAttribute("result", text);
