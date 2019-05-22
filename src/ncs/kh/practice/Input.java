@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class Input extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//hello
+	String id="id입니다";
 	}
 
 	
