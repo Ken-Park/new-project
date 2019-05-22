@@ -13,6 +13,7 @@ public class Input extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	String id="id입니다";
+	String pw="비밀번호 헛소리";
 	}
 
 	
