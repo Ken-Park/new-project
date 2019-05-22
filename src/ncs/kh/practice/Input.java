@@ -8,12 +8,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/Input")
+@WebServlet("*.input")
 public class Input extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	String id="id입니다";
-	String pw="비밀번호 헛소리";
+	String ctxPath = request.getContextPath();
+	String reqUri = request.getRequestURI();
+	String command = reqUri.substring(ctxPath.length());
+	
+	if(command.equals("/input.input")) {
+		String text = request.getParameter("text");
+		System.out.println(text);
+		request.setAttribute("result", text);
+		request.getRequestDispatcher("result.jsp").forward(request, response);
+	}
 	}
 
 	
